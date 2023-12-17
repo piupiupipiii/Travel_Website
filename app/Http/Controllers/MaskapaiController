@@ -1,0 +1,21 @@
+<?php
+// MaskapaiController.php
+namespace App\Http\Controllers;
+
+use App\Models\Maskapai;
+use Illuminate\Http\Request;
+
+class MaskapaiController extends Controller
+{
+    public function index()
+    {
+        $maskapais = Maskapai::all();
+        return view('maskapai.index', compact('maskapais'));
+    }
+
+    public function show($id)
+    {
+        $maskapai = Maskapai::find($id);
+        return view('maskapai.show', compact('maskapai'));
+    }
+}
