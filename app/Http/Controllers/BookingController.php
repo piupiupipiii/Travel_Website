@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Booking; // Replace with the appropriate model
+use App\Models\Booking;
+use Illuminate\Http\Request; // Replace with the appropriate model
 
 class BookingController extends Controller
 {
@@ -20,7 +20,6 @@ class BookingController extends Controller
     /**
      * Handle the search form and display the results.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\View\View
      */
     public function search(Request $request)
@@ -50,7 +49,6 @@ class BookingController extends Controller
     /**
      * Handle the booking process and save data to the database.
      *
-     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function processBooking(Request $request)

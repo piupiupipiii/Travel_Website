@@ -4,6 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property int $id_maskapai
+ * @property string $nama_maskapai
+ * @property string $kode_maskapai
+ */
 class Maskapai extends Model
 {
     /**
@@ -12,6 +17,8 @@ class Maskapai extends Model
      * @var string
      */
     protected $table = 'maskapai'; // Change 'maskapais' to the actual table name if different
+
+    protected $primaryKey = 'id_maskapai';
 
     /**
      * The attributes that are mass assignable.
