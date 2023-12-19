@@ -9,9 +9,9 @@ class MaskapaiController extends Controller
 {
     public function index(Request $request)
     {
-        $maskapais = Maskapai::all();
+        $maskapai = Maskapai::all();
 
-        return view('maskapai.index', compact('maskapais'));
+        return view('maskapai.index', compact('maskapai'));
     }
 
     public function show(Request $request)
